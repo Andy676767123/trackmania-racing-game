@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap');
+:root { color-scheme: dark; --cyan:#54f6ff; --pink:#ff3eb5; --yellow:#ffe66d; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; background:#080916; color:#fff; font-family:'Space Mono',monospace; overflow:hidden; }
+.game-shell { position:relative; width:100vw; height:100vh; background:linear-gradient(#111530,#080916); }
+canvas { display:block; width:100%; height:100%; }
+.hud { position:absolute; inset:0; pointer-events:none; padding:28px 38px; display:flex; justify-content:space-between; align-items:flex-start; text-shadow:0 2px 8px #000; }
+.brand { font:900 22px Orbitron,sans-serif; letter-spacing:3px; color:var(--cyan); }
+.brand small { display:block; margin-top:7px; font:700 9px 'Space Mono'; color:#fff8; letter-spacing:3px; }
+.dot { display:inline-block; width:10px; height:10px; margin-right:8px; background:var(--pink); border-radius:50%; box-shadow:0 0 16px var(--pink); }
+.stats { display:flex; gap:35px; text-align:right; }
+.stats span { display:block; color:#fff8; font-size:10px; letter-spacing:2px; }.stats strong { display:block; color:var(--yellow); font:700 19px Orbitron,sans-serif; margin-top:5px; }
+.help { position:absolute; right:38px; bottom:28px; color:#fff8; font-size:11px; line-height:1.8; text-align:right; }.help b,.help span { color:var(--cyan); border:1px solid #54f6ff66; padding:2px 6px; border-radius:3px; }.help i { color:#fff6; }
+.countdown { position:absolute; inset:0; display:grid; place-items:center; color:var(--yellow); font:900 100px Orbitron; text-shadow:0 0 30px var(--pink); pointer-events:none; }
+.result { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); min-width:310px; padding:30px; background:#080916ee; border:1px solid var(--cyan); box-shadow:0 0 35px #54f6ff55; text-align:center; }.result p { color:var(--pink); letter-spacing:3px; }.result h1 { color:var(--yellow); font:900 35px Orbitron; }.result button { cursor:pointer; border:0; padding:13px 20px; color:#080916; background:var(--cyan); font:700 12px 'Space Mono'; }
+@media(max-width:700px){.hud{padding:18px}.stats{gap:10px}.stats strong{font-size:13px}.brand{font-size:15px}.help{right:18px;bottom:16px}}
